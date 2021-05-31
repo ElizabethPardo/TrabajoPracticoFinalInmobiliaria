@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_perfil">
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.trabajopracticofinal.ui.perfil.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_inmuebles"
+        android:name="com.example.trabajopracticofinal.ui.inmuebles.InmueblesFragment"
+        android:label="Propiedades"
+        tools:layout="@layout/fragment_inmuebles" />
+
+    <fragment
+        android:id="@+id/nav_inquilinos"
+        android:name="com.example.trabajopracticofinal.ui.inquilinos.InquilinosFragment"
+        android:label="Inquilinos"
+        tools:layout="@layout/fragment_inquilinos" />
+    <fragment
+        android:id="@+id/nav_pagos"
+        android:name="com.example.trabajopracticofinal.ui.pagos.PagosFragment"
+        android:label="Pagos por contrato"
+        tools:layout="@layout/pagos_fragment" >
+        <action
+            android:id="@+id/action_nav_pagos_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.trabajopracticofinal.ui.logout.LogoutFragment"
+        android:label="Salir"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.example.trabajopracticofinal.ui.contratos.ContratosFragment"
+        android:label="Contratos"
+        tools:layout="@layout/contratos_fragment" />
+
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.example.trabajopracticofinal.ui.pagos.PagoFragment"
+        android:label="Pago"
+        tools:layout="@layout/pago_fragment" >
+        <action
+            android:id="@+id/action_pagoFragment_to_nav_pagos"
+            app:destination="@id/nav_pagos" />
+    </fragment>
+</navigation>

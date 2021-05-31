@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343A40"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/input_rounded"
+        android:inputType="textNoSuggestions"
+
+>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:inputType="textNoSuggestions"
+            android:textSize="20sp"
+            android:background="@null"
+            android:padding="2dp"
+            android:textColor="#000000"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDni2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Dni"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etApellido2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Telefono"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLugarTrabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Lugar De Trabajo"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombreGarante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Nombre Garante"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etApellidoGarante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Apellido Garante"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDniGarante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Dni Garante"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTelefonoGarante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#ffffff"
+            android:hint="Telefono Garante"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDireccionGarante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Dirección Garante"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>
