@@ -79,7 +79,7 @@ public class PerfilViewModel extends AndroidViewModel {
         propietarios.enqueue(new Callback<Propietario>() {
             @Override
             public void onResponse(Call<Propietario> call, Response<Propietario> response) {
-
+                Log.d("salida",response.body().getClave());
                 if(response.isSuccessful()){
                     if(response.body() != null) {
                         propietarioMutable.setValue(response.body());

@@ -1,10 +1,12 @@
 package com.example.trabajopracticofinal.ui.pagos;
 
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,8 @@ import com.example.trabajopracticofinal.ui.contratos.ContratoViewModel;
 import com.example.trabajopracticofinal.ui.contratos.ContratosViewModel;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +44,7 @@ public class PagosAdapter extends ArrayAdapter<Pago> {
         this.pagos = objects;
         this.li = li;
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -59,7 +63,10 @@ public class PagosAdapter extends ArrayAdapter<Pago> {
         TextInputEditText etImportePago= item.findViewById(R.id.etdImportePago);
 
         etNroPago.setText((""+ pago.getNroPago()));
-        etFechaPago.setText(pago.getFechaPago());
+
+        LocalDateTime fecha = LocalDateTime.parse(pago.getFechaPago());
+        LocalDate fff = fecha.toLocalDate();
+        etFechaPago.setText(fff.toString());
         etImportePago.setText("$" +pago.getImporte());
 
         return  item;

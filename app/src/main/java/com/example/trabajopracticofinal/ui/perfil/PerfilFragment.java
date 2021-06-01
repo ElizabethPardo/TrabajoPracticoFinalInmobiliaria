@@ -30,8 +30,8 @@ public class PerfilFragment extends Fragment {
     private TextInputEditText etNombre;
     private TextInputEditText etDireccion;
     private TextInputEditText etTelefono;
-    private TextInputEditText etEmail;
-    private TextInputEditText etPass;
+   // private TextInputEditText etEmail;
+   // private TextInputEditText etPass;
     private Button btAceptar,btEditar;
     private Propietario propietarioActual=null;
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -50,8 +50,6 @@ public class PerfilFragment extends Fragment {
         etNombre=view.findViewById(R.id.etNombre);
         etDireccion=view.findViewById(R.id.etDireccion);
         etTelefono=view.findViewById(R.id.etTelefono);
-        etEmail=view.findViewById(R.id.etEmail);
-        etPass=view.findViewById(R.id.etPass2);
         btEditar=view.findViewById(R.id.btEditar);
         btAceptar=view.findViewById(R.id.btAceptar);
 
@@ -64,8 +62,8 @@ public class PerfilFragment extends Fragment {
                 etDni.setText(propietario.getDni());
                 etDireccion.setText(propietario.getDireccion());
                 etTelefono.setText(propietario.getTelefono());
-                etEmail.setText(propietario.getEmail());
-                etPass.setText(null);
+
+
                 propietarioActual=propietario;
 
             }
@@ -81,8 +79,6 @@ public class PerfilFragment extends Fragment {
                 etDni.setEnabled(true);
                 etDireccion.setEnabled(true);
                 etTelefono.setEnabled(true);
-                etEmail.setEnabled(true);
-                etPass.setEnabled(true);
                 btEditar.setVisibility(View.GONE);
                 btAceptar.setVisibility(View.VISIBLE);
             }
@@ -91,20 +87,17 @@ public class PerfilFragment extends Fragment {
         btAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etPass.getText() == null)
-                { Log.d("Salida",propietarioActual.getClave()+"BB");
-                    propietarioActual.setClave("null");
-                }
-                else
-                {
-                    propietarioActual.setClave(etPass.getText().toString());
-                }
-                Propietario prop= new Propietario(propietarioActual.getId(),etNombre.getText().toString(),etApellido.getText().toString(),etDni.getText().toString(),etDireccion.getText().toString(),etTelefono.getText().toString(),etEmail.getText().toString(), propietarioActual.getClave());
 
-                Log.d("Salida",prop.getClave()+"BB");
+
+                Propietario prop= new Propietario(propietarioActual.getId(),etNombre.getText().toString(),etApellido.getText().toString(),etDni.getText().toString(),etDireccion.getText().toString(),etTelefono.getText().toString(),propietarioActual.getEmail(), propietarioActual.getClave());
                 vm.editarPerfil(prop);
-
-                //m.recuperarPropietario();
+                etNombre.setEnabled(false);
+                etApellido.setEnabled(false);
+                etDni.setEnabled(false);
+                etDireccion.setEnabled(false);
+                etTelefono.setEnabled(false);
+                btEditar.setVisibility(View.VISIBLE);
+                btAceptar.setVisibility(View.INVISIBLE);
             }
         });
 

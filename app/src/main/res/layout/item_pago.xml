@@ -23,6 +23,7 @@
             android:ems="10"
             android:textColor="#ffffff"
             android:hint="Número pago"
+            android:enabled="false"
             android:inputType="number"
             android:textSize="20sp"
            />
@@ -39,6 +40,7 @@
             android:id="@+id/etdFechaPago"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:ems="10"
             android:textColor="#ffffff"
             android:hint="Fecha Pago"
@@ -61,6 +63,7 @@
             android:ems="10"
             android:textColor="#ffffff"
             android:hint="Importe"
+            android:enabled="false"
             android:inputType="numberDecimal"
             android:textSize="20sp"
          />

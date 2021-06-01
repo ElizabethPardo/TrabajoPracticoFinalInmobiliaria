@@ -46,9 +46,6 @@ public class ContratoAdapter extends ArrayAdapter<Contrato> {
             item= li.inflate(R.layout.contrato_fragment,parent,false);
         }
 
-
-
-
         Contrato contrato =contratos.get(position);
         TextInputEditText fechaIngreso= item.findViewById(R.id.etdFechaIngreso);
         TextInputEditText fechaSalida= item.findViewById(R.id.etdFechaSalida);
@@ -62,10 +59,6 @@ public class ContratoAdapter extends ArrayAdapter<Contrato> {
         LocalDate hhh = fc.toLocalDate();
         fechaSalida.setText(hhh.toString());
 
-
-
-        //fechaIngreso.setText(contrato.getFechaDesde());
-        //fechaSalida.setText(contrato.getFechaHasta());
         direccionInmueble.setText(contrato.getInmueble().getDireccion());
 
         return  item;

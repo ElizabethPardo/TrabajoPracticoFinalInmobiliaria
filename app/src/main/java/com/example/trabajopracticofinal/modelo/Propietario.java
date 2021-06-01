@@ -37,6 +37,14 @@ public class Propietario {
         this.clave = clave;
     }
 
+    public Propietario(int id, String nombre, String apellido, String dni, String direccion, String telefono) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
 
     public int getId() {
         return id;

@@ -61,10 +61,6 @@ public class LoginActivityViewModel extends AndroidViewModel {
                     editor.putString("Token","Bearer "+ response.body());
                     editor.commit();
                     loginMutable.setValue(true);
-                    //Intent intent = new Intent(context, MainActivity.class);
-                    //context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                //  Log.d("Salida","Token"+ response.body());
-                    //Toast.makeText(context,response.body(),Toast.LENGTH_LONG).show();
 
                 }
                 else
