@@ -81,6 +81,7 @@ public class PerfilFragment extends Fragment {
                 etTelefono.setEnabled(true);
                 btEditar.setVisibility(View.GONE);
                 btAceptar.setVisibility(View.VISIBLE);
+
             }
         });
 
